@@ -3,7 +3,7 @@ import EditForm from '@/components/EditForm';
 
 const getDishById = async (id)=>{
     
-    const API_URL = process.env.URL;
+    const API_URL = process.env.API_URL;
 
     try {
         const result = await fetch(`${API_URL}/api/menu/${id}`,{

@@ -6,7 +6,7 @@ import { RemoveBtn } from './RemoveBtn';
 
 const getMenu = async () => {
 
-    const API_URL = process.env.URL;
+    const API_URL = process.env.API_URL;
 
     try {
         const result = await fetch(`${API_URL}/api/menu`,{cache: 'no-store'});
