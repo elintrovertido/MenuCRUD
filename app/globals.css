@@ -2,26 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.main-page{
+    background: hsla(205, 46%, 10%, 1);
+
+background: linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1 );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.display-list{
+    background-color: rgb(244, 247, 67);
+
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.dish-name{
+    font-size: large;
+    font-weight: 800;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dish-desc{
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}
+
+
+.container{
+    margin-top: 5%;
+    background: #d1deeb;
+    text-align: center;
+}
+
+.button{
+    background-color: black;
+    color: white;
+}
+.button:hover{
+    background: rgb(24, 34, 25);
+    color : white;
+}
+
+/* above mobiles */
+@media (min-width:501px){
+    .display-list{
+        
+        border-radius: 1rem;
+        width: 20cm
+    }
+
+    .container{
+        width : 50%;
+        position: fixed;
+        left:25%;
+        align-items: stretch;
+    }
+    
+}
+
+/* mobile */
+@media (max-width:500px){
+
+    .container{
+        width : 90%;
+        margin-top:10%;
+        border-radius: 2rem;
+        margin-left: 5%;
+    }
+
+    .display-list{
+        margin-left:1rem;
+        border-radius: 1rem;
+        width: 90%;
+    }
+    .dishes{
+        font-size: larger;
+    }
+    .label-box{
+        margin-left: 0cm;
+    }
+
+    .add-dish{
+        margin-right:0cm;
+        padding-bottom: 2%;
+    }
 }
