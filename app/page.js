@@ -11,8 +11,7 @@ export default function Home() {
     flex-col items-center justify-between ">
       
       <div>
-        <DishList/>
-        
+        <DishList/>   
       </div>
       <Footer/>
     </main>
