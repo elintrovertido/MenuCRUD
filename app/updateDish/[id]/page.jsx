@@ -23,7 +23,7 @@ const getDishById = async (id)=>{
 }
 
 
-const page = async ({ params }) => {
+const Page = async ({ params }) => {
 
    const {id} = params;
    const {dish} = await getDishById(id);
@@ -34,4 +34,4 @@ const page = async ({ params }) => {
     )
 }
 
-export default page
+export default Page

@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
 
 
     const [dishName,setDishName] = useState("")
@@ -86,4 +86,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
